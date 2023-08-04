@@ -92,6 +92,11 @@ public class formularioCRUD extends javax.swing.JFrame {
         eliminar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaHab = new javax.swing.JTable();
+        jLabel9 = new javax.swing.JLabel();
+        tipos = new javax.swing.JMenuBar();
+        btnTipos = new javax.swing.JMenu();
+        jTipos = new javax.swing.JCheckBoxMenuItem();
+        jEstados = new javax.swing.JCheckBoxMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -139,6 +144,7 @@ public class formularioCRUD extends javax.swing.JFrame {
         jPanel1.add(boxTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 292, 30));
 
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Numero habitacion");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 212, 30));
@@ -164,26 +170,31 @@ public class formularioCRUD extends javax.swing.JFrame {
         jPanel1.add(boxImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, 292, 30));
 
         jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Estado");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 212, 30));
 
         jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Tipo habitacion");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 212, 30));
 
         jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Tarifa");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 212, 30));
 
         jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Capacidad");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 212, 30));
 
         jLabel7.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("Imagen");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 212, 30));
@@ -255,15 +266,53 @@ public class formularioCRUD extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 690, 430));
 
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/habita.jpg"))); // NOI18N
+        jLabel9.setText("jLabel9");
+        jLabel9.setMaximumSize(new java.awt.Dimension(173, 244));
+        jLabel9.setMinimumSize(new java.awt.Dimension(173, 244));
+        jLabel9.setPreferredSize(new java.awt.Dimension(173, 244));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 900));
+
+        tipos.setBackground(new java.awt.Color(0, 51, 51));
+        tipos.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+
+        btnTipos.setBackground(new java.awt.Color(0, 51, 51));
+        btnTipos.setBorder(null);
+        btnTipos.setForeground(new java.awt.Color(255, 255, 255));
+        btnTipos.setText("Opciones");
+        btnTipos.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+
+        jTipos.setSelected(true);
+        jTipos.setText("Tipos");
+        jTipos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTiposActionPerformed(evt);
+            }
+        });
+        btnTipos.add(jTipos);
+
+        jEstados.setSelected(true);
+        jEstados.setText("Estados");
+        jEstados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jEstadosActionPerformed(evt);
+            }
+        });
+        btnTipos.add(jEstados);
+
+        tipos.add(btnTipos);
+
+        setJMenuBar(tipos);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 766, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 766, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 897, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -347,6 +396,20 @@ public class formularioCRUD extends javax.swing.JFrame {
         mostrarDatos(boxNro.getText());
     }//GEN-LAST:event_buscarActionPerformed
 
+    private void jTiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTiposActionPerformed
+        // TODO add your handling code here:
+        Tipos opcionTipos = new Tipos();
+        opcionTipos.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jTiposActionPerformed
+
+    private void jEstadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEstadosActionPerformed
+        // TODO add your handling code here:
+        Estados opcionEstados = new Estados();
+        opcionEstados.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jEstadosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -390,9 +453,11 @@ public class formularioCRUD extends javax.swing.JFrame {
     private javax.swing.JTextField boxNro;
     private javax.swing.JTextField boxTarifa;
     private javax.swing.JTextField boxTipo;
+    private javax.swing.JMenu btnTipos;
     private javax.swing.JButton buscar;
     private javax.swing.JButton eliminar;
     private javax.swing.JButton guardar;
+    private javax.swing.JCheckBoxMenuItem jEstados;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -400,10 +465,13 @@ public class formularioCRUD extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JCheckBoxMenuItem jTipos;
     private javax.swing.JButton listar;
     private javax.swing.JTable tablaHab;
+    private javax.swing.JMenuBar tipos;
     // End of variables declaration//GEN-END:variables
 
     Conectar cc = new Conectar();
